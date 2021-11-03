@@ -1,7 +1,19 @@
 import React, { FunctionComponent } from 'react';
+import { IToDoItem } from './interfaces/i-to-do-item';
 
-const ToDoItem: FunctionComponent = () => {
-  return <div>To do item</div>;
+type ToDoItemProps = {
+  toDoItem: IToDoItem;
+};
+
+const ToDoItem: FunctionComponent<ToDoItemProps> = ({
+  toDoItem,
+}: ToDoItemProps) => {
+  return (
+    <div>
+      <h3>{toDoItem.title}</h3>
+      <p>{toDoItem.date}</p>
+    </div>
+  );
 };
 
 export default ToDoItem;
