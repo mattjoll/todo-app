@@ -1,7 +1,12 @@
-import React from "react";
+import React, { FunctionComponent } from 'react';
+import ToDoList from './ToDo/ToDoList';
 
-function App() {
-  return <h1>Hello world!</h1>;
-}
+const App: FunctionComponent = () => {
+  return (
+    <main>
+      <ToDoList />
+    </main>
+  );
+};
 
 export default App;
